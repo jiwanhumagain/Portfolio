@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      clipPath: {
+        'slant': 'polygon(0 0, 100% 0, 100% 80%, 0 100%)',
+      },
+      fontFamily: {
+        enfonix: ['Enfonix', 'sans-serif'], // Custom font with fallback
+      },
+     
     },
   },
   plugins: [],
