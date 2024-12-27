@@ -33,7 +33,7 @@ export default function Homepage() {
             {/* Main content */}
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <Navbar />
-                {/* <HomeComponent />
+                <HomeComponent />
                 <Marquee />
                 <Services/>
                 <AboutMe/>
@@ -45,7 +45,7 @@ export default function Homepage() {
                 <Marquee />
                 <Blogs/>
                 <Marquee />
-                <Footer/> */}
+                <Footer/>
 
 
             </div>
