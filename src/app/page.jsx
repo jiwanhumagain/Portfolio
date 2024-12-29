@@ -37,15 +37,15 @@ export default function Homepage() {
                 <Marquee />
                 <Services/>
                 <AboutMe/>
-                <Education/>
-                <Projects/>
+                {/* <Education/> */}
+                {/* <Projects/>
                 <PricingModel/>
                 <Marquee />
                 <Contact/>
                 <Marquee />
                 <Blogs/>
                 <Marquee />
-                <Footer/>
+                <Footer/> */}
 
 
             </div>
