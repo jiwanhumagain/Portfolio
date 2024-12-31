@@ -1,6 +1,6 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 
 export default function ServicesScroll() {
     const Services = [
@@ -16,19 +16,18 @@ export default function ServicesScroll() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Helper function to determine cards to show based on screen width
-    const getCardsToShow = () => {
-        const width = window.innerWidth;
-        if (width >= 1536) return 3;  // xl breakpoint
-        if (width >= 1100) return 3;  // custom breakpoint
-        if (width >= 768) return 3;   // md breakpoint
-        return 1;                     // mobile
-    };
+    // Media query hooks for breakpoints
+    const isXl = useMediaQuery('(min-width: 1536px)');
+    const isLg = useMediaQuery('(min-width: 1100px)');
+    const isMd = useMediaQuery('(min-width: 768px)');
+
+    // Determine cards to show based on breakpoints
+    const cardsToShow = isXl ? 3 : isLg ? 3 : isMd ? 3 : 1;
 
     return (
         <div className="relative flex items-center pb-16 sm:pb-20 lg:pb-28 mx-4 pt-10 sm:mx-12 lg:mx-36">
             <div className="flex flex-col lg:flex-row items-center overflow-hidden lg:space-x-8 space-y-6 lg:space-y-0 w-full lg:w-[1800px]">
-                {Services.slice(currentIndex, currentIndex + getCardsToShow()).map((service, index) => (
+                {Services.slice(currentIndex, currentIndex + cardsToShow).map((service, index) => (
                     <div
                         key={index}
                         className="h-[400px] w-full sm:h-[500px] md:h-[600px] lg:h-[600px] 
