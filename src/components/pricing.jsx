@@ -1,13 +1,14 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DoneIcon from '@mui/icons-material/Done';
+
 const HourlyItems = [
     'Lorem ipsum dolor sit amet',
     'consectetur adipiscing elit',
     'Sed do eiusmod tempor',
     'ut labore et dolore magna aliqua',
     'consectetur adipiscing elit',
-
 ]
+
 const MonthlyItems = [
     'Lorem ipsum dolor sit amet',
     'consectetur adipiscing elit',
@@ -19,132 +20,116 @@ const MonthlyItems = [
     'Sed do eiusmod tempor',
 ]
 
-
 export default function PricingModel() {
     return (
-        <div className="flex flex-row h-full w-full bg-white pb-28 pl-28 pt-36">
-
-            <div className='flex flex-col gap-y-52 pb-0 w-[33%] '>
-                <div className=" flex flex-col gap-y-6 items-start justify-center">
-                    <div className="text-black font-sans text-3xl flex relative font-medium tracking-wide">
-                        <span>-</span>
-                        <span className="ml-2">Pricing Table</span>
+        <div className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28 py-12 sm:py-16 md:py-24 lg:py-28 xl:py-36">
+            {/* Main Container */}
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                {/* Left Section */}
+                <div className='flex flex-col w-full lg:w-[25%] gap-y-12 lg:gap-y-52'>
+                    {/* Header Section */}
+                    <div className="flex flex-col gap-y-4 sm:gap-y-6 items-start justify-center relative">
+                        <div className="text-black font-sans text-xl sm:text-2xl md:text-3xl flex font-medium tracking-wide">
+                            <span>-</span>
+                            <span className="ml-2">Pricing Table</span>
+                        </div>
+                        <div className="absolute top-0 left-0 w-full overflow-hidden">
+                            <span className="font-enfonix font-extrabold text-gray-600 text-4xl sm:text-6xl md:text-8xl lg:text-9xl opacity-5 tracking-widest scale-x-125 wave-animation whitespace-nowrap">
+                                Pricing Model
+                            </span>
+                        </div>
+                        <div className="text-black font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl flex flex-col font-semibold mt-6">
+                            <span className="tracking-wide sm:tracking-wider flex flex-row gap-x-2 sm:gap-x-4">
+                                My <span className="text-purple-700">Pricing</span>
+                            </span>
+                            <span className="text-purple-700">Model</span>
+                        </div>
                     </div>
-                    <div className="absolute -mt-[2%]">
-                        <span className="font-enfonix font-extrabold text-gray-600 text-9xl opacity-5 tracking-widest scale-x-125 wave-animation">
-                            Pricing Model
-                        </span>
-                    </div>
-                    <div className="text-black font-sans text-7xl flex font-semibold">
-                        <div className="text-black font-sans text-7xl flex flex-col font-semibold">
-                            <span className="tracking-widest white flex flex-row">My <div className="text-purple-700 pl-4">Pricing </div></span>
-                            <div className="text-purple-700"> Model</div>
+                    {/* Custom Plan Card */}
+                    <div className="w-full rounded-2xl flex flex-col border-2 p-6 sm:p-8 gap-y-6 sm:gap-y-8">
+                        <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-semibold'>
+                            Hey! Need a Custom Plan?
+                        </div>
+                        <div className='text-base sm:text-lg md:text-xl lg:text-2xl'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <div className="relative h-14">
+                            <div className="absolute left-0 right-0 h-14 bg-black rounded-full flex items-center">
+                                <div className="absolute left-1 h-12 w-12 flex justify-center items-center rounded-full bg-white">
+                                    <ArrowForwardIcon className="text-black" />
+                                </div>
+                                <div className="absolute left-14 right-1 h-[52px] rounded-full bg-green-500 flex justify-center items-center">
+                                    <span className="text-black font-semibold text-lg">Get Started</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="h-[450px] w-[85%] rounded-2xl flex flex-col border-2 justify-center items-start gap-y-8 pl-6">
-                    <div className='text-5xl text-black pr-10 font-semiold'>
-                        Hey! Need a Custom Plans?
-                    </div>
-                    <div className='text-2xl pr-10'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                    </div>
-                    <div className="h-14 w-72 bg-black rounded-full flex items-center gap-5 justify-end">
-
-                        <div className="w-12 h-12 flex justify-center items-center rounded-full bg-white">
-                            <ArrowForwardIcon className="text-black" fontSize="large" />
+                {/* Right Section - Pricing Cards */}
+                <div className="flex flex-col items-end md:flex-row w-full lg:w-[75%] gap-8 md:gap-6 lg:gap-8">
+                    {/* Hourly Card */}
+                    <div className="bg-purple-800 w-full md:w-[45%] rounded-2xl lg:h-[70%] xl:h-[70%] flex flex-col p-6 sm:p-8 gap-y-8 sm:gap-y-10">
+                        <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center w-full pt-4 sm:pt-6'>
+                            <div className='flex flex-col gap-y-4'>
+                                <div className='text-2xl sm:text-3xl md:text-4xl text-white font-semibold'>
+                                    Hourly
+                                </div>
+                                <div className='flex items-end gap-2'>
+                                    <span className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-extrabold'>$80</span>
+                                    <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-semibold'>/Hour</span>
+                                </div>
+                            </div>
+                            <div className='h-12 w-12 sm:h-14 sm:w-14 bg-purple-400 rounded-full flex items-center justify-center mt-4 sm:mt-0'>
+                                <ArrowForwardIcon className="text-white w-6 sm:w-7 h-6 sm:h-7" />
+                            </div>
                         </div>
+                        <div className='flex flex-col gap-y-6'>
+                            {HourlyItems.map((item, index) => (
+                                <div className='flex items-center gap-x-4' key={index}>
+                                    <div className='h-6 w-6 sm:h-8 sm:w-8 rounded-full flex justify-center items-center bg-white'>
+                                        <DoneIcon className='text-black w-4 sm:w-5 h-4 sm:h-5' />
+                                    </div>
+                                    <div className='text-base sm:text-lg md:text-xl lg:text-2xl text-white'>
+                                        {item}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                        <div className="w-52 h-full rounded-full bg-green-500 flex justify-center items-center pl-4">
-                            <span className="text-black font-semibold text-2xl">Get Started</span>
+                    {/* Monthly Card */}
+                    <div className="bg-white w-full md:w-[55%] h-full rounded-2xl flex flex-col border-2 p-6 sm:p-8 gap-y-8 sm:gap-y-10">
+                        <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center w-full pt-4 sm:pt-6'>
+                            <div className='flex flex-col gap-y-4'>
+                                <div className='text-2xl sm:text-3xl md:text-4xl text-black font-semibold'>
+                                    Monthly
+                                </div>
+                                <div className='flex items-end gap-2'>
+                                    <span className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-purple-800 font-extrabold'>$9600</span>
+                                    <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black font-semibold'>/Month</span>
+                                </div>
+                            </div>
+                            <div className='h-12 w-12 sm:h-14 sm:w-14 bg-gray-300 rounded-full flex items-center justify-center mt-4 sm:mt-0'>
+                                <ArrowForwardIcon className="text-black w-6 sm:w-7 h-6 sm:h-7" />
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-y-6'>
+                            {MonthlyItems.map((item, index) => (
+                                <div className='flex items-center gap-x-4' key={index}>
+                                    <div className='h-6 w-6 sm:h-8 sm:w-8 rounded-full flex justify-center items-center bg-purple-800'>
+                                        <DoneIcon className='text-white w-4 sm:w-5 h-4 sm:h-5' />
+                                    </div>
+                                    <div className='text-base sm:text-lg md:text-xl lg:text-2xl text-black'>
+                                        {item}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div className="flex h-auto w-[66%] flex-row gap-x-[7%] items-end">
-
-                <div className="bg-purple-800 h-[80%] w-[40%] rounded-2xl flex flex-col border-2 justify-start items-start gap-y-10 pl-6">
-
-                    <div className='flex h-[30%] w-full items-center gap-x-32 pt-14 '>
-                        <div className='flex text-white flex-col gap-y-4'>
-                            <div className='text-4xl font-semibold'>
-                                Hourly
-                            </div>
-                            <div className='flex items-end justify-start gap-2'>
-                                <span className='text-7xl font-extrabold'> $80 </span>
-                                <span className='text-4xl font-semibold'>/Hour</span>
-
-                            </div>
-                        </div>
-                        <div className='h-[50%] w-[15%] bg-purple-400 rounded-full flex items-center justify-center '>
-                            <ArrowForwardIcon className="text-white" fontSize="large" />
-
-                        </div>
-                    </div>
-                    <div className='flex flex-col h-[60%] w-full items-start'>
-                        {HourlyItems.map((items,index) => (
-                            <div className='flex gap-x-6 h-20' key={index}>
-                                <div className='h-8 w-8 rounded-full flex justify-center items-center bg-white'>
-                                    <DoneIcon className='text-black ' fontSize='medium' />
-
-                                </div>
-                                <div className='text-2xl text-white'>
-                                    {items}
-                                </div>
-
-                            </div>
-                        ))}
-
-
-                    </div>
-
-                </div>
-                <div className="bg-white h-[100%] w-[40%] rounded-2xl flex flex-col border-2 justify-start items-start gap-y-10 pl-6">
-
-                    <div className='flex h-[30%] w-full items-center gap-x-4 pt-14 '>
-                        <div className='flex flex-col gap-y-4'>
-                            <div className='text-4xl font-semibold text-black'>
-                                Monthly
-                            </div>
-                            <div className='flex items-end justify-start gap-2'>
-                                <span className='text-7xl font-extrabold text-purple-800'> $9600 </span>
-                                <span className='text-4xl font-semibold text-black'>/Month</span>
-
-                            </div>
-                        </div>
-                        <div className='h-[35%] w-[15%] bg-gray-300 rounded-full flex items-center justify-center '>
-                            <ArrowForwardIcon className="text-black" fontSize="large" />
-
-                        </div>
-                    </div>
-                    <div className='flex flex-col h-[60%] w-full items-start'>
-                        {MonthlyItems.map((items,index) => (
-                            <div className='flex gap-x-6 h-20' key={index}>
-                                <div className='h-8 w-8 rounded-full flex justify-center items-center bg-purple-800'>
-                                    <DoneIcon className='text-white ' fontSize='medium' />
-
-                                </div>
-                                <div className='text-2xl text-black'>
-                                    {items}
-                                </div>
-
-                            </div>
-                        ))}
-
-
-                    </div>
-
-                </div>
-                
-            </div>
-
-
-
-
         </div>
-    )
+    );
 }

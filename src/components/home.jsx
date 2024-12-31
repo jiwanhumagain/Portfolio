@@ -1,81 +1,53 @@
 import React from 'react';
+
 export default function HomeComponent() {
-
     return (
-
-        <div className='lg:mt-20 md:mt-12 mt-10 flex flex-col items-center '>
-            <div className='flex flex-row w-full justify-center'>
-                <div className='flex flex-col  items-center'>
-                    <h1 className='lg:text-5xl text-3xl '>- Hello</h1>
-                    <h1 className='lg:mt-8 md:mt-5 mt-3 lg:text-7xl text-5xl  font-semibold tracking-widest font-serif'>I'm <b className='text-blue-400 underline underline-offset-5 decoration-4'>Jiwan,</b></h1>
-                    <h1 className='lg:mt-8 md:mt-5 mt-3 lg:text-7xl text-5xl  font-semibold tracking-widest font-serif whitespace-nowrap'>Full Stack Developer</h1>
-                </div>
-                {/* <div className="bg-black w-40 h-40 rounded-full translate-x-72 relative flex items-center justify-center">
-
-                    <div className="absolute h-20 w-20 rounded-full bg-green-500"></div>
-
-
-                    <div className="absolute w-full h-full flex items-center justify-center">
-                        {Array.from({ length: 3 }).map((_, j) => (
-                            Array.from("HIRE ME .").map((char, i) => (
-                                <span
-                                    key={`${j}-${i}`}
-                                    className="absolute text-white text-xs font-semibold"
-                                    style={{
-                                        transform: `rotate(${j * 120 + i * 9}deg) translate(65px) rotate(-${j * 120 + i * 9}deg)`,
-                                    }}
-                                >
-                                    {char}
-                                </span>
-                            ))
-                        ))}
-                    </div>
-
-                </div> */}
-
-
+        <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
+            {/* Header Section */}
+            <div className="w-full text-center">
+                <h1 className="text-2xl sm:text-3xl lg:text-5xl">- Hello</h1>
+                <h1 className="mt-2 sm:mt-3 md:mt-5 lg:mt-8 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-widest font-serif">
+                    I'm <b className="text-blue-400 underline underline-offset-5 decoration-4">Jiwan,</b>
+                </h1>
+                <h1 className="mt-2 sm:mt-3 md:mt-5 lg:mt-8 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-widest font-serif">
+                    Full Stack Developer
+                </h1>
             </div>
 
-
-            <div className="relative justify-center flex lg:h-[800px] lg:w-[800px] h-[400px] w-[400px] mt-20">
-
-                <div className='lg:h-[600px] lg:w-[500px] h-[300px] w-[250px] translate-y-[100px] -translate-x-[50px] skew-x-12 lg:-translate-x-[50px] lg:translate-y-[200px] '
-
+            {/* Main Visual Section */}
+            <div className="relative flex justify-center w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] lg:max-w-[800px] lg:h-[800px] mt-10 sm:mt-16 lg:mt-20">
+                {/* Background shapes */}
+                <div
+                    className="h-[200px] w-[180px] sm:h-[300px] sm:w-[250px] lg:h-[600px] lg:w-[500px] translate-y-[50px] -translate-x-[30px] sm:translate-y-[100px] sm:-translate-x-[50px] lg:translate-y-[200px] skew-x-12"
                     style={{
-
                         borderRadius: '20px 10px 10px 10px',
                         backgroundColor: 'rgb(44, 3, 169)',
                     }}
                 ></div>
-
-
-                <div className='lg:h-[300px] lg:w-[300px]  lg:-skew-x-12 lg:translate-x-[20px] lg:translate-y-[500px] h-[150px] w-[150px]  -skew-x-12 translate-x-[20px] translate-y-[250px] '
-
+                <div
+                    className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[300px] lg:w-[300px] -skew-x-12 translate-x-[10px] translate-y-[180px] sm:translate-x-[20px] sm:translate-y-[250px] lg:translate-y-[500px]"
                     style={{
-
-
                         borderRadius: '10px',
-
-                        backgroundColor: 'rgb(136, 135, 135)'
+                        backgroundColor: 'rgb(136, 135, 135)',
                     }}
                 ></div>
 
+                {/* Hero Image */}
                 <img
                     src="./assets/hero.png"
                     alt="Jiwan Image"
-                    className="h-full w-full object-fill absolute grayscale"
+                    className="absolute max-h-full max-w-full object-cover grayscale"
                 />
 
-
-                <div
-                    className="absolute lg:h-[100px] lg:w-[550px] sm:h-[50px] sm:w-[350px] rounded-[50px] z-10 bg-white justify-around flex flex-row items-center top-[85%] left-[50%] translate-x-[-53%]"
-                >
-                    <div className=" lg:py-7 lg:px-16 px-8 py-2 rounded-full flex flex-row items-center" style={{ backgroundColor: 'rgb(44, 3, 169)', color: 'white' }}>
-                        <div className='font-semibold lg:text-3xl text-xl'>Portfolio</div>
-                        <div className="h-8 w-8 bg-green-400 rounded-full ml-2 flex items-center justify-center" >
+                {/* CTA Section */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[280px] sm:w-[350px] lg:w-[550px] h-[40px] sm:h-[50px] lg:h-[100px] rounded-[50px] bg-white flex justify-around items-center z-10">
+                    <button className="py-1.5 px-4 sm:py-2 sm:px-8 lg:py-7 lg:px-16 rounded-full flex items-center gap-2 text-white"
+                        style={{ backgroundColor: 'rgb(44, 3, 169)' }}>
+                        <span className="text-lg sm:text-xl lg:text-3xl font-semibold whitespace-nowrap">Portfolio</span>
+                        <div className="h-6 w-6 sm:h-8 sm:w-8 bg-green-400 rounded-full flex items-center justify-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4 text-white"
+                                className="h-3 w-3 sm:h-4 sm:w-4 text-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -88,67 +60,70 @@ export default function HomeComponent() {
                                 />
                             </svg>
                         </div>
-                    </div>
-                    <div className="text-black font-semibold lg:text-3xl text-xl whitespace-nowrap border-black border-2 lg:py-6 lg:px-16 px-8 py-2 rounded-full">
+                    </button>
+                    <button className="text-black font-semibold text-lg sm:text-xl lg:text-3xl whitespace-nowrap border-black border-2 py-1.5 px-4 sm:py-2 sm:px-8 lg:py-6 lg:px-16 rounded-full">
                         Hire Me
-                    </div>
+                    </button>
                 </div>
-                <div className='hidden absolute lg:flex md:flex flex-col lg:top-[65%] lg:-left-[50%] lg:h-[5rem] lg:w-[20rem] md:top-[50%] md:-left-[65%] md:h-[3rem] md:w-[12rem] ' >
-                    <span className='font-semibold lg:text-3xl md:text-xl'>450+</span>
-                    <span className='text-xl mt-3'>Happy Clients</span>
-                    <div className='flex flex-row items-center gap-0 mt-3'>
-                        <div className="relative rounded-full lg:h-20 lg:w-20 md:h-12 md:w-16 lg:border-4 md:border-2 border-white overflow-hidden">
-                            <img
-                                src="./assets/hero.png"
-                                alt="Jiwan Image"
-                                className="absolute inset-0 w-full h-full object-cover grayscale bg-slate-500"
-                            />
-                        </div>
-                        <div className="relative rounded-full lg:h-20 lg:w-20 md:h-12 md:w-16 lg:border-4 md:border-2 border-white overflow-hidden lg:-ml-6 md:-ml-3">
-                            <img
-                                src="./assets/hero.png"
-                                alt="Jiwan Image"
-                                className="absolute inset-0 w-full h-full object-cover grayscale bg-slate-500"
-                            />
-                        </div>
-                        <div className="relative rounded-full lg:h-20 lg:w-20 md:h-12 md:w-16 lg:border-4 md:border-2 border-white overflow-hidden lg:-ml-6 md:-ml-3">
-                            <img
-                                src="./assets/hero.png"
-                                alt="Jiwan Image"
-                                className="absolute inset-0 w-full h-full object-cover grayscale bg-slate-500"
-                            />
-                        </div>
-                        <div className="relative rounded-full lg:h-20 lg:w-20 md:h-12 md:w-16 lg:border-4 md:border-2 border-white overflow-hidden lg:-ml-6 md:-ml-3">
-                            <img
-                                src="./assets/hero.png"
-                                alt="Jiwan Image"
-                                className="absolute inset-0 w-full h-full object-cover grayscale bg-slate-500"
-                            />
-                        </div>
-                        <div className="relative rounded-full lg:h-20 lg:w-20 md:h-12 md:w-16 lg:border-4 md:border-2 border-white overflow-hidden z-20 lg:-ml-6 md:-ml-3">
+
+                {/* Happy Clients Section */}
+                <div className="hidden sm:flex absolute flex-col 
+        sm:-left-[100%] md:-left-[100%] lg:-left-[100%] xl:-left-[20%]
+        sm:top-1/2 lg:top-2/3
+        sm:-translate-x-1/2 md:-translate-x-full
+        sm:scale-75 md:scale-90 lg:scale-100
+        z-10">
+                    <span className="font-semibold text-2xl lg:text-3xl">450+</span>
+                    <span className="text-lg lg:text-xl mt-2">Happy Clients</span>
+
+                    <div className="flex items-center mt-3">
+                        {/* Client Images */}
+                        {Array.from({ length: 4 }).map((_, index) => (
                             <div
-                                className="absolute inset-0 w-full h-full flex items-center justify-center object-cover grayscale bg-slate-200 text-5xl"
-                                style={{ Color: 'rgb(44, 3, 169)' }}
+                                key={index}
+                                className={`
+                        relative rounded-full 
+                        sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20
+                        border-2 lg:border-4 border-white 
+                        overflow-hidden
+                        ${index !== 0 ? '-ml-4 lg:-ml-6' : ''}
+                        transition-transform hover:scale-110
+                    `}
+                            >
+                                <img
+                                    src="./assets/hero.png"
+                                    alt={`Client ${index + 1}`}
+                                    className="absolute inset-0 w-full h-full object-cover grayscale bg-slate-500 hover:grayscale-0 transition-all"
+                                />
+                            </div>
+                        ))}
+
+                        {/* Plus Button */}
+                        <div className={`
+                relative rounded-full 
+                sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20
+                border-2 lg:border-4 border-white 
+                overflow-hidden 
+                -ml-4 lg:-ml-6 
+                z-20
+                hover:scale-110 transition-transform
+            `}>
+                            <div className="
+                    absolute inset-0 
+                    w-full h-full 
+                    flex items-center justify-center 
+                    bg-slate-200 
+                    text-2xl md:text-3xl lg:text-5xl
+                    hover:bg-slate-300 transition-colors
+                    "
+                                style={{ color: 'rgb(44, 3, 169)' }}
                             >
                                 +
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
         </div>
-
-
-    )
+    );
 }

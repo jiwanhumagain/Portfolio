@@ -23,107 +23,116 @@ export default function Contact() {
     },
     ]
     return (
-        <div className="flex flex-row h-full w-full bg-purple-700 pb-28 pl-28 pt-36">
-
-            <div className='flex flex-col gap-y-20 pb-0 w-[33%] '>
-                <div className=" flex flex-col gap-y-6 items-start justify-center">
-                    <div className="text-white font-sans text-3xl flex relative font-medium tracking-wide">
+        <div className="flex flex-col lg:flex-row w-full bg-purple-700 px-4 sm:px-8 lg:px-12 py-8 lg:py-12">
+            {/* Left Section */}
+            <div className='flex flex-col gap-y-8 lg:gap-y-20 w-full lg:w-[40%]'>
+                <div className="flex flex-col gap-y-4 lg:gap-y-6 items-start justify-center relative">
+                    <div className="text-white font-sans text-2xl lg:text-3xl flex font-medium tracking-wide">
                         <span className='text-green-400'>-</span>
                         <span className="ml-2">Contact Us</span>
                     </div>
-                    <div className="absolute -mt-[10%] -ml-[15%]">
-                        <span className="font-enfonix font-extrabold text-white text-9xl opacity-5 tracking-widest scale-x-125 wave-animation">
+
+                    {/* Background Text */}
+                    <div className="absolute -top-12 lg:-top-20 left-0 w-full overflow-hidden">
+                        <span className="font-enfonix font-extrabold text-white text-5xl lg:text-9xl opacity-5 tracking-widest scale-x-125 wave-animation whitespace-nowrap">
                             Contact Us
                         </span>
                     </div>
-                    <div className="text-white font-sans text-7xl flex font-semibold">
-                        <div className="text-white font-sans text-7xl flex flex-col font-semibold">
-                            <span className="tracking-widest white flex flex-row">Let's <div className="text-green-400 pl-4">Connect </div> <div className='pl-4'> &</div></span>
-                            <div className="text-green-400"> Collaborate</div>
+
+                    {/* Main Title */}
+                    <div className="text-white font-sans text-4xl sm:text-5xl lg:text-7xl flex flex-col font-semibold mt-4">
+                        <div className="flex flex-wrap gap-2 lg:gap-4">
+                            <span>Let's</span>
+                            <span className="text-green-400">Connect</span>
+                            <span>&</span>
                         </div>
+                        <span className="text-green-400">Collaborate</span>
                     </div>
-                    <div className='text-2xl text-white'>
+
+                    <div className='text-lg sm:text-xl lg:text-2xl text-white max-w-2xl'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-
                 </div>
-                <div className='flex flex-col justify-start items-start'>
+
+                {/* Contact Details */}
+                <div className='flex flex-col gap-6 lg:gap-8'>
                     {ContactDetails.map((items, index) => (
-                        <div className='flex gap-x-5 justify-center items-center h-24' key={index} >
-                            <div className='w-16 h-16 bg-white rounded-full flex justify-center items-center'>
-                                <items.icon fontSize='large' />
+                        <div className='flex gap-4 lg:gap-6 items-center' key={index}>
+                            <div className='w-12 h-12 lg:w-16 lg:h-16 bg-white rounded-full flex justify-center items-center flex-shrink-0'>
+                                <items.icon fontSize={window.innerWidth >= 1024 ? 'large' : 'medium'} />
                             </div>
-                            <div className='text-4xl text-white'> {items.detail}</div>
+                            <div className='text-xl sm:text-2xl lg:text-4xl text-white break-all'>{items.detail}</div>
                         </div>
                     ))}
                 </div>
-
-
-
             </div>
-            <div className='flex flex-col pb-0 w-[66%] ml-[10%] '>
-                <div className='flex flex-row h-[15%] w-full justify-start gap-x-[5%]'>
-                    <div className="h-full w-[40%] flex items-center justify-center ">
+
+            {/* Right Section - Form */}
+            <div className='flex flex-col w-full lg:w-[60%] lg:pl-20 mt-12 lg:mt-0 gap-6 lg:gap-8'>
+                {/* First Row */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6'>
+                    <div className="w-full">
                         <input
-                            className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pl-[2rem] placeholder-white flex items-center justify-center"
+                            className="w-full h-14 lg:h-16 bg-purple-200 rounded-3xl text-lg lg:text-2xl px-6 placeholder-white"
                             placeholder="First Name *"
                         />
                     </div>
-                    <div className="h-full w-[40%] flex items-center justify-center ">
+                    <div className="w-full">
                         <input
-                            className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pl-[2rem] placeholder-white flex items-center justify-center"
+                            className="w-full h-14 lg:h-16 bg-purple-200 rounded-3xl text-lg lg:text-2xl px-6 placeholder-white"
                             placeholder="Last Name *"
                         />
                     </div>
                 </div>
-                <div className='flex flex-row h-[15%] w-full justify-start gap-x-[5%]'>
-                    <div className="h-full w-[40%] flex items-center justify-center ">
+
+                {/* Second Row */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6'>
+                    <div className="w-full">
                         <input
-                            className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pl-[2rem] placeholder-white flex items-center justify-center"
+                            className="w-full h-14 lg:h-16 bg-purple-200 rounded-3xl text-lg lg:text-2xl px-6 placeholder-white"
                             placeholder="Email *"
                         />
                     </div>
-                    <div className="h-full w-[40%] flex items-center justify-center ">
+                    <div className="w-full">
                         <input
-                            className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pl-[2rem] placeholder-white flex items-center justify-center"
+                            className="w-full h-14 lg:h-16 bg-purple-200 rounded-3xl text-lg lg:text-2xl px-6 placeholder-white"
                             placeholder="Phone Number *"
                         />
                     </div>
                 </div>
-                <div className="h-[20%] w-[85%] flex  items-center ">
+
+                {/* Subject */}
+                <div className="w-full">
                     <input
-                        className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pl-[2rem] placeholder-white flex items-center justify-center"
+                        className="w-full h-14 lg:h-16 bg-purple-200 rounded-3xl text-lg lg:text-2xl px-6 placeholder-white"
                         placeholder="Subject *"
                     />
                 </div>
 
-                <div className="h-[40%] w-[85%] mt-[3%] flex">
+                {/* Message */}
+                <div className="w-full">
                     <textarea
-                        className="h-[66%] w-full bg-purple-200 rounded-3xl text-2xl pt-4 pl-[2rem] placeholder-white placeholder-opacity-75 resize-none"
+                        className="w-full h-40 bg-purple-200 rounded-3xl text-lg lg:text-2xl p-6 placeholder-white placeholder-opacity-75 resize-none"
                         placeholder="Message *"
                     ></textarea>
                 </div>
 
-
-
-                <div className=''>
-                    <div className="h-20 w-72 bg-white rounded-full flex items-center gap-5 justify-end">
-
-                        <div className="w-12 h-12 flex justify-center items-center rounded-full bg-purple-700">
-                            <ArrowForwardIcon className="text-white" fontSize="large" />
+                {/* Submit Button */}
+                <div className='w-full flex justify-start mt-4'>
+                    <div className="h-14 sm:h-16 lg:h-20 w-full sm:w-72 bg-white rounded-full flex items-center p-1.5 gap-2">
+                        <div className="h-full aspect-square rounded-full bg-purple-700 flex justify-center items-center">
+                            <ArrowForwardIcon className="text-white" fontSize={window.innerWidth >= 1024 ? "large" : "medium"} />
+                        </div>
+                        <div className="flex-grow h-full">
+                            <div className="w-full h-full rounded-full bg-green-500 flex justify-center items-center">
+                                <span className="text-black font-semibold text-lg sm:text-xl lg:text-2xl">Send Message</span>
+                            </div>
                         </div>
 
-                        <div className="w-52 h-full rounded-full bg-green-500 flex justify-center items-center pl-4">
-                            <span className="text-black font-semibold text-2xl">Send Message</span>
-                        </div>
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     )
 }
