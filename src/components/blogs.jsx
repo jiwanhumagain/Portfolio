@@ -1,6 +1,7 @@
+'use client'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useMediaQuery } from '@mui/material';
-
+import { useRouter } from 'next/navigation';
 const BlogsItems = [
     {
         img: '/assets/hero.png',
@@ -67,6 +68,8 @@ function BlogPosts({ isLargeScreen }) {
 
 export default function Blogs() {
     const isLargeScreen = useMediaQuery('(min-width: 1024px)');
+    const router =useRouter();
+
 
     return (
         <div className="flex flex-col w-full bg-white px-4 sm:px-8 lg:px-28 py-12 sm:py-16 lg:py-36 gap-y-12 sm:gap-y-16 lg:gap-y-20">
@@ -93,7 +96,7 @@ export default function Blogs() {
                 </div>
 
                 <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
-                    <div className="h-16 sm:h-20 w-full sm:w-96 bg-black rounded-full flex items-center p-1.5 gap-2">
+                    <div className="h-16 sm:h-20 w-full sm:w-96 bg-black rounded-full flex items-center p-1.5 gap-2 hover:cursor-pointer" onClick={()=>{router.push('/Blogs')}}>
                         <div className="h-full aspect-square rounded-full bg-white flex justify-center items-center">
                             <ArrowForwardIcon className="text-black" fontSize={isLargeScreen ? "large" : "medium"} />
                         </div>

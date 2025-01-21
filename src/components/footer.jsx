@@ -1,9 +1,11 @@
+'use client'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { useRouter } from 'next/navigation';
 
 const Icons = [
     {
@@ -25,6 +27,7 @@ const Icons = [
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const router=useRouter();
     return (
         <div className="flex flex-col h-full w-full bg-white pb-8 md:pb-28 px-4 md:px-28 pt-12 md:pt-36 gap-y-8 md:gap-y-20">
             {/* Top Section */}
@@ -45,7 +48,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="h-full w-full md:w-1/2 flex items-center justify-center md:justify-end">
-                    <div className="h-16 md:h-20 w-[300px] sm:w-[350px] md:w-96 bg-black rounded-full flex items-center gap-2 md:gap-5 px-2">
+                    <div className="h-16 md:h-20 w-[300px] sm:w-[350px] md:w-96 bg-black rounded-full flex items-center gap-2 md:gap-5 px-2 py-1 hover:cursor-pointer" onClick={()=>{router.push('\Contact')}}>
                         <div className="w-12 md:w-16 h-12 md:h-16 flex-shrink-0 flex justify-center items-center rounded-full bg-white">
                             <ArrowForwardIcon className="text-black text-2xl md:text-3xl" />
                         </div>

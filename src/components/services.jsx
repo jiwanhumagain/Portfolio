@@ -1,9 +1,11 @@
+'use client'
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ServicesScroll from './serviceScroll/servicesScroll';
-
+import { useRouter } from 'next/navigation';
 
 export default function Services() {
+  const router=useRouter();
   return (
     <div className="h-full w-full bg-violet-600 relative">
       {/* Header Section */}
@@ -30,7 +32,7 @@ export default function Services() {
 
         {/* Right Section - Button */}
         <div className="w-full sm:w-1/3 flex justify-center sm:justify-end items-center mb-8 sm:mb-0">
-          <div className="h-14 sm:h-16 lg:h-20 w-full lg:max-w-[384px] bg-white rounded-full flex items-center justify-end gap-2 lg:gap-5 p-1">
+          <div className="h-14 sm:h-16 lg:h-20 w-full lg:max-w-[384px] bg-white rounded-full flex items-center justify-end gap-2 lg:gap-5 p-1 hover:cursor-pointer" onClick={()=>{router.push('\Services')}}>
             {/* Arrow Button */}
             <div className="max-h-12 min-h-8 sm:max-h-14 lg:h-16 aspect-square flex justify-center items-center rounded-full bg-purple-700 flex-shrink-0">
               <ArrowForwardIcon
@@ -38,7 +40,7 @@ export default function Services() {
               />
             </div>
             {/* View All Services Button */}
-            <div className="h-full flex-grow rounded-full bg-green-500 flex justify-center items-center">
+            <div className="h-full flex-grow rounded-full bg-green-500 flex justify-center items-center" >
               <span className="text-black font-semibold text-lg sm:text-xl lg:text-2xl px-4 whitespace-nowrap">
                 View All Services
               </span>

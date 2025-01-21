@@ -1,6 +1,10 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function HomeComponent() {
+    const router =useRouter();
     return (
         <div id='Home' className="mt-6 sm:mt-8 md:mt-12 lg:mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
             {/* Header Section */}
@@ -61,7 +65,7 @@ export default function HomeComponent() {
                             </svg>
                         </div>
                     </button>
-                    <button className="text-black font-semibold text-lg sm:text-xl lg:text-3xl whitespace-nowrap border-black border-2 py-1.5 px-4 sm:py-2 sm:px-8 lg:py-6 lg:px-16 rounded-full">
+                    <button className="text-black font-semibold text-lg sm:text-xl lg:text-3xl whitespace-nowrap border-black border-2 py-1.5 px-4 sm:py-2 sm:px-8 lg:py-6 lg:px-16 rounded-full" onClick={()=>{router.push('/Contact')}}>
                         Hire Me
                     </button>
                 </div>
