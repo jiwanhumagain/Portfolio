@@ -16,12 +16,12 @@ export default function ServicesScroll() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Media query hooks for breakpoints
+    
     const isXl = useMediaQuery('(min-width: 1536px)');
     const isLg = useMediaQuery('(min-width: 1100px)');
     const isMd = useMediaQuery('(min-width: 768px)');
 
-    // Determine cards to show based on breakpoints
+    
     const cardsToShow = isXl ? 3 : isLg ? 3 : isMd ? 3 : 1;
 
     return (

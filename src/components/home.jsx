@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HomeComponent() {
     return (
-        <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
+        <div id='Home' className="mt-6 sm:mt-8 md:mt-12 lg:mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
             {/* Header Section */}
             <div className="w-full text-center">
                 <h1 className="text-2xl sm:text-3xl lg:text-5xl">- Hello</h1>

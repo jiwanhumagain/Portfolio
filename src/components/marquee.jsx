@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+'use client'
+import React, {useState } from 'react';
 import Marquee from 'react-fast-marquee';
 
 const Skills = ['Web Design', 'Backend Development', 'Frontend Development', 'App Development', 'Cloud Deployment',"React", "Node.js", "JavaScript", "CSS", "HTML"];

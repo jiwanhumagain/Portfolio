@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import { useState, useEffect } from "react";
 
 function Counter({ target }) {
@@ -36,23 +37,26 @@ function CounterName({ text }) {
 }
 
 export default function AboutMe() {
+    let yearsofExperience = new Date().getFullYear()-2020;
     return (
-        <div className="flex flex-col-reverse lg:flex-row w-full bg-white py-8 lg:py-12 px-4 lg:px-10 justify-center gap-x-10 md:gap-x-20 lg:gap-x-24 xl:gap-x-32">
+        <div className="flex flex-col-reverse lg:flex-row w-full bg-white py-8 lg:py-12 px-4 lg:px-10 justify-center gap-x-10 md:gap-x-20 lg:gap-x-24 xl:gap-x-32 pt-28">
             {/* Purple Experience Section */}
             <div className="w-full lg:w-[42%] xl:w-[45%] flex justify-center lg:justify-end mt-8 lg:mt-0">
-                <div className="relative bg-purple-700 w-full max-w-[500px] xl:max-w-[600px] rounded-3xl flex flex-row overflow-hidden py-8 sm:py-10 md:py-12">
+                <div className="relative bg-purple-700 w-full h-[80%] max-w-[500px] xl:max-w-[600px] rounded-3xl flex flex-row overflow-hidden py-8 sm:py-10 md:py-12">
                     {/* Vertical name */}
                     <div className="w-[80px] sm:w-[100px] lg:w-[150px] flex justify-center items-center">
-                        <div className="-rotate-90 -translate-x-[30px] sm:-translate-x-[40px] lg:-translate-x-[60px] tracking-widest text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold whitespace-nowrap">
+                        <div className="-rotate-90 -translate-x-[30px] sm:-translate-x-[40px] lg:-translate-x-[60px] tracking-widest text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold whitespace-nowrap">
                             JIWAN HUMAGAIN
                         </div>
                     </div>
                     
                     {/* Experience number */}
                     <div className="flex flex-col justify-between w-full relative">
-                        <div className="text-[150px] sm:text-[200px] md:text-[250px] lg:text-[300px] text-white whitespace-nowrap leading-none ml-[40px] sm:ml-[60px] md:ml-[80px] lg:ml-[100px]">5</div>
+                        <div className="text-[150px] sm:text-[200px] md:text-[250px] lg:text-[300px] text-white whitespace-nowrap leading-none ml-[40px] sm:ml-[60px] md:ml-[80px] lg:ml-[100px]">
+                           {yearsofExperience}
+                        </div>
                         <div className="mt-4 ml-[40px] sm:ml-[60px] md:ml-[80px]">
-                            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl -ml-5 font-semibold whitespace-nowrap">
+                            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl -ml-5 font-semibold whitespace-pre-wrap">
                                 Years of Experience
                             </div>
                         </div>
