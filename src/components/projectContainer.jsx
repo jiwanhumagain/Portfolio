@@ -24,8 +24,8 @@ export default function ProjectContainer({ direction }) {
             </div>
 
             {/* Content Section */}
-            <div className='w-full lg:w-1/2 flex justify-center items-start rounded-3xl p-4 sm:p-6 md:p-8'>
-                <div className='w-full flex flex-col items-start justify-start gap-y-4 sm:gap-y-6 md:gap-y-8 lg:gap-y-10'>
+            <div className='w-full lg:w-1/2 flex justify-center items-center rounded-3xl p-4 sm:p-6 md:p-8'>
+                <div className='w-full flex flex-col items-start justify-start gap-y-4 sm:gap-y-6 md:gap-y-8 lg:gap-y-20'>
                     {/* Buttons Row */}
                     <div className='flex flex-wrap gap-2 sm:gap-3 md:gap-4'>
                         <ButtonDesign itemName={'APP Design'} />

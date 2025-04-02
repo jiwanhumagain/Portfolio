@@ -4,14 +4,29 @@ import { useMediaQuery } from '@mui/material';
 
 export default function ServicesScroll() {
     const Services = [
-        'Web Design',
-        'Backend Development',
-        'Frontend Development',
-        'App Development',
-        'Cloud Deployment',
-        'Database Design',
-        'SEO Optimization',
-        'Cybersecurity',
+        {
+            'title':'Web Design',
+            'img':'./assets/web.jpeg'
+        },
+        {
+            'title':'Backend Development',
+            'img':'./assets/backend.jpeg'
+
+        },
+        {
+       
+            'title': 'Frontend Development',
+            'img':'./assets/frontend.jpeg'
+
+        },
+        {
+            'title':    'App Development',
+            'img':'./assets/html.png'
+
+        }
+        
+        
+     
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,10 +52,10 @@ export default function ServicesScroll() {
                     >
                         <div className="h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] 
                                     rounded-full bg-gray-200 flex items-center justify-center">
-                            <img className="h-2/3 w-2/3" src="./assets/hero.png" alt={service} />
+                            <img className="h-2/3 w-2/3 rounded-full object-cover" src={service.img} alt={service.title} />
                         </div>
                         <div className="flex flex-col justify-center items-center gap-y-6 sm:gap-y-9">
-                            <h1 className="font-bold text-2xl md:text-4xl text-center">{service}</h1>
+                            <h1 className="font-bold text-2xl md:text-4xl text-center">{service.title}</h1>
                             <p className="text-center break-words mx-8 sm:mx-14 font-serif text-lg md:text-xl font-medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </p>

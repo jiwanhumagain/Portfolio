@@ -1,10 +1,18 @@
 'use client';
 
-import React from 'react';
+import React ,{useState} from 'react';
 import { useRouter } from 'next/navigation';
+import { Moon, Sun } from 'lucide-react';
 
 export default function HomeComponent() {
     const router =useRouter();
+
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.documentElement.classList.toggle('dark');
+    };
     return (
         <div id='Home' className="mt-6 sm:mt-8 md:mt-12 lg:mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
             {/* Header Section */}

@@ -35,9 +35,9 @@ function ExperienceContainer({ experienceObjects }) {
 }
 function Container({ type, Icon, objects }) {
     return (
-        <div className="w-full sm:w-[95%] md:w-[90%] lg:w-[650px] xl:w-[800px] min-h-[400px] sm:min-h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] bg-gray-200 rounded-xl md:rounded-3xl flex flex-col gap-y-3 sm:gap-y-4 md:gap-y-5 items-center mx-4 sm:mx-auto md:mx-2 mb-8 md:mb-0">
+        <div className="w-full sm:w-[95%] md:w-[90%] lg:w-[650px] xl:w-[800px] min-h-[410px] sm:min-h-[460px] md:h-[510px] lg:h-[560px] xl:h-[610px] bg-gray-200 rounded-xl md:rounded-3xl flex flex-col gap-y-3 sm:gap-y-4 md:gap-y-5 items-center mx-4 sm:mx-auto md:mx-2 mb-8 md:mb-0">
             <div className="flex flex-row h-[60px] sm:h-[70px] md:h-[80px] lg:h-[90px] xl:h-[100px] w-full gap-x-3 sm:gap-x-4 md:gap-x-5 items-center justify-start pl-4 sm:pl-6 md:pl-9 pt-3 md:pt-5">
-                <div className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 lg:h-18 xl:h-20 sm:w-12 md:w-16 lg:w-18 xl:w-20 rounded-full bg-purple-700 flex items-center justify-center">
+                <div className="h-10 w-10 sm:h-12 md:h-16 lg:h-18 xl:h-20 sm:w-12 md:w-16 lg:w-18 xl:w-20 rounded-full bg-purple-700 flex items-center justify-center">
                     <Icon className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10" />
                 </div>
                 <div className="font-bold text-purple-700 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
@@ -61,38 +61,38 @@ export default function Education() {
             'end': '2024'
         },
         {
-            'Name': 'Kathmandu University',
-            'Des': 'Bachelors in Computer Engineering',
-            'start': '2020',
-            'end': '2024'
+            'Name': 'Khwopa Secondary School',
+            'Des': 'High School',
+            'start': '2018',
+            'end': '2020'
         },
         {
-            'Name': 'Kathmandu University',
+            'Name': 'Shree Bhaleshwor Secondary School',
             'Des': 'Bachelors in Computer Engineering',
-            'start': '2020',
-            'end': '2024'
-        }
+            'start': '2016',
+            'end': '2018'
+        },
     ];
 
     const dataWork = [
         {
-            'Name': 'BackEnd Developer',
-            'Des': 'New It',
-            'start': '2020',
-            'end': '2024'
+            'Name': 'Coming Soon',
+            'Des': '',
+            'start': '-',
+            'end': '-'
         },
-        {
-            'Name': 'Web Developer',
-            'Des': 'New It',
-            'start': '2020',
-            'end': '2024'
-        },
-        {
-            'Name': 'Web Developer',
-            'Des': 'New It',
-            'start': '2020',
-            'end': '2024'
-        }
+        // {
+        //     'Name': 'Web Developer',
+        //     'Des': 'New It',
+        //     'start': '2020',
+        //     'end': '2024'
+        // },
+        // {
+        //     'Name': 'Web Developer',
+        //     'Des': 'New It',
+        //     'start': '2020',
+        //     'end': '2024'
+        // }
     ];
 
     return (

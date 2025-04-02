@@ -25,7 +25,7 @@ export default function Projects() {
                     </div>
                 </div>
 
-                {/* Right Side - View All Button */}
+        
                 <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
                     <div className="h-14 sm:h-16 md:h-20 w-full sm:w-96 bg-white rounded-full flex items-center gap-3 sm:gap-5 justify-end hover:cursor-pointer" onClick={()=>{router.push('\Projects')}}>
                         <div className="px-3 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 flex justify-center items-center rounded-full bg-purple-700">

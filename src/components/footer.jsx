@@ -9,25 +9,36 @@ import { useRouter } from 'next/navigation';
 
 const Icons = [
     {
-        'icon': FacebookIcon
+        'icon': FacebookIcon,
+        'link':'https://www.facebook.com/',
     },
     {
-        'icon': InstagramIcon
+        'icon': InstagramIcon,
+        'link':'hhh',
     },
     {
-        'icon': TwitterIcon
+        'icon': TwitterIcon,
+        'link':'hhh',
     },
     {
-        'icon': LinkedInIcon
+        'icon': LinkedInIcon,
+        'link':'hhh',
     },
     {
-        'icon': YouTubeIcon
+        'icon': YouTubeIcon,
+        'link':'hhh',
     },
 ]
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
-    const router=useRouter();
+    const router = useRouter();
+    const handleClick = (path) => {
+        if (path == 'Home') {
+            router.push('/')
+        }
+        else{router.push(`/${path}`)}
+    }
     return (
         <div className="flex flex-col h-full w-full bg-white pb-8 md:pb-28 px-4 md:px-28 pt-12 md:pt-36 gap-y-8 md:gap-y-20">
             {/* Top Section */}
@@ -48,7 +59,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="h-full w-full md:w-1/2 flex items-center justify-center md:justify-end">
-                    <div className="h-16 md:h-20 w-[300px] sm:w-[350px] md:w-96 bg-black rounded-full flex items-center gap-2 md:gap-5 px-2 py-1 hover:cursor-pointer" onClick={()=>{router.push('\Contact')}}>
+                    <div className="h-16 md:h-20 w-[300px] sm:w-[350px] md:w-96 bg-black rounded-full flex items-center gap-2 md:gap-5 px-2 py-1 hover:cursor-pointer" onClick={() => { router.push('\Contact') }}>
                         <div className="w-12 md:w-16 h-12 md:h-16 flex-shrink-0 flex justify-center items-center rounded-full bg-white">
                             <ArrowForwardIcon className="text-black text-2xl md:text-3xl" />
                         </div>
@@ -71,7 +82,9 @@ export default function Footer() {
                     <div className='flex items-center gap-x-3'>
                         {Icons.map((items, index) => (
                             <div className='h-10 md:h-12 w-10 md:w-12 bg-purple-800 rounded-full flex items-center justify-center' key={index}>
-                                <items.icon fontSize='medium' className='text-white' />
+                                <a href={`${items.link}`} >
+                                    <items.icon fontSize='medium' className='text-white' />
+                                </a>
                             </div>
                         ))}
                     </div>
@@ -80,19 +93,19 @@ export default function Footer() {
                 {/* Navigation Links */}
                 <div className='flex flex-col gap-y-6 md:gap-y-10'>
                     <div className='text-xl md:text-2xl font-semibold text-purple-800 tracking-widest'>Navigation</div>
-                    <div className='text-lg md:text-xl text-gray-800'>Home</div>
-                    <div className='text-lg md:text-xl text-gray-800'>Services</div>
-                    <div className='text-lg md:text-xl text-gray-800'>About</div>
-                    <div className='text-lg md:text-xl text-gray-800'>Projects</div>
-                    <div className='text-lg md:text-xl text-gray-800'>Blogs</div>
+                    <div className='text-lg md:text-xl text-gray-800 hover:cursor-pointer' onClick={() => { handleClick('Home') }}>Home</div>
+                    <div className='text-lg md:text-xl text-gray-800 hover:cursor-pointer' onClick={() => { handleClick('Services') }}>Services</div>
+                    <div className='text-lg md:text-xl text-gray-800 hover:cursor-pointer' onClick={() => { handleClick('About') }}>About</div>
+                    <div className='text-lg md:text-xl text-gray-800 hover:cursor-pointer' onClick={() => { handleClick('Projects') }}>Projects</div>
+                    <div className='text-lg md:text-xl text-gray-800 hover:cursor-pointer' onClick={() => { handleClick('Blogs') }}>Blogs</div>
                 </div>
 
                 {/* Contact Info */}
                 <div className='flex flex-col gap-y-6 md:gap-y-10'>
                     <div className='text-xl md:text-2xl font-semibold text-purple-800 tracking-widest'>Contact</div>
-                    <div className='text-lg md:text-xl text-gray-800'>+9779800000000</div>
-                    <div className='text-lg md:text-xl text-gray-800'>example@example.com</div>
-                    <div className='text-lg md:text-xl text-gray-800'>www.example.com</div>
+                    {/* <div className='text-lg md:text-xl text-gray-800'>+9779849132125</div> */}
+                    <div className='text-lg md:text-xl text-gray-800'>jeevanhumagain@gmail.com</div>
+                    <div className='text-lg md:text-xl text-gray-800'>www.jiwanhumagain.com.np</div>
                     <div className='text-lg md:text-xl text-gray-800'>Panauti-4 KavrePalanchwok Nepal</div>
                 </div>
 

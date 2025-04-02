@@ -29,11 +29,9 @@ export default function Navbar() {
     if (path === 'Home') {
       router.push('/')
     } else {
-
       const formattedPath = path.replace(/\s+/g, '');
       router.push(`/${formattedPath}`);
     }
-
   }
 
   const navbarElements = ['Home', 'Services', 'About', 'Projects', 'Pricing', 'Blogs'];
@@ -56,7 +54,7 @@ export default function Navbar() {
     <div className="h-36 w-full flex items-center flex-row gap-9 px-12 justify-between md:gap-4 md:px-7">
       {/* Logo */}
       <div>
-        <li className="list-none font-serif font-extrabold lg:text-5xl flex flex-row gap-1 md:text-xl sm:text-5xl">
+        <li className="list-none font-serif font-extrabold lg:text-5xl flex flex-row gap-1 md:text-xl sm:text-5xl [@media(prefers-color-scheme:dark)]:text-white">
           Jiwan<h1 className="text-red-700"> . </h1>
         </li>
       </div>
@@ -69,10 +67,11 @@ export default function Navbar() {
         {navbarElements.map((item, index) => (
           <li
             key={index}
-            className={`relative myId ${activeIndex === index
-              ? 'text-blue-500 underline decoration-2 underline-offset-4'
-              : 'text-black'
-              }`}
+            className={`relative myId ${
+              activeIndex === index
+                ? 'text-blue-500 underline decoration-2 underline-offset-4'
+                : '[@media(prefers-color-scheme:dark)]:text-white text-black'
+            }`}
             onClick={() => handelClick(item)}
             onMouseEnter={() => handleHover(index)}
             onMouseLeave={() => handleHover(index)}
@@ -83,7 +82,11 @@ export default function Navbar() {
       </div>
 
       {/* Chat Button */}
-      <button className='hidden md:flex box-border border-solid border-2 rounded px-9 py-3 text-lg md:px-5 md:py-2' onClick={() => { handelClick('Contact') }}>
+      <button 
+        className="hidden md:flex box-border border-solid border-2 rounded px-9 py-3 text-lg md:px-5 md:py-2 
+        [@media(prefers-color-scheme:dark)]:text-white [@media(prefers-color-scheme:dark)]:border-white" 
+        onClick={() => { handelClick('Contact') }}
+      >
         Contact
       </button>
 
@@ -96,15 +99,15 @@ export default function Navbar() {
         >
           <motion.div
             animate={open ? { backgroundColor: "white", rotate: -45 } : { rotate: 0 }}
-            className="w-10 h-1 bg-black rounded origin-right"
+            className="w-10 h-1 bg-black [@media(prefers-color-scheme:dark)]:bg-white rounded origin-right"
           ></motion.div>
           <motion.div
             animate={open ? { opacity: 0 } : { opacity: 1 }}
-            className="w-10 h-1 bg-black rounded"
+            className="w-10 h-1 bg-black [@media(prefers-color-scheme:dark)]:bg-white rounded"
           ></motion.div>
           <motion.div
             animate={open ? { backgroundColor: "white", rotate: 45 } : { rotate: 0 }}
-            className="w-10 h-1 bg-black rounded origin-right"
+            className="w-10 h-1 bg-black [@media(prefers-color-scheme:dark)]:bg-white rounded origin-right"
           ></motion.div>
         </button>
       </div>

@@ -5,33 +5,33 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const servicesItems = [
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/html.png',
+    'title': 'HTML/CSS',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/JavaScript.png',
+    'title': 'Javascript',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/react.png',
+    'title': 'React.js',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/node.png',
+    'title': 'Node.js',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/flutter.png',
+    'title': 'Flutter',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
-    'icon': ArrowForwardIcon,
-    'title': 'UI/UX',
+    'img': '/assets/mysql.jpeg',
+    'title': 'MySQL',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
 ];
@@ -42,11 +42,12 @@ const ServiceRoundedContainer = () => {
       {servicesItems.map((items, index) => (
         <div
           key={index}
-          className="rounded-full bg-purple-500 hover:bg-white pt-10 pb-10 h-[500px] w-[350px] md:max-w-[400px] lg:max-w-[300px] xl:max-w-[550px] mx-auto flex flex-col items-center justify-start gap-y-10"
+          className="rounded-full bg-purple-500 hover:bg-white pt-10 pb-10 h-[500px] w-[350px] md:max-w-[400px] lg:max-w-[300px] xl:max-w-[550px] mx-auto flex flex-col items-center justify-start gap-y-10 text-gray-50 hover:text-black"
         >
-          <div className="h-[150px] w-[150px] bg-purple-200 rounded-full flex items-center justify-center">
-            <items.icon fontSize="large" />
+          <div className="h-[150px] w-[150px] bg-purple-200 rounded-full flex items-center justify-center overflow-hidden">
+            <img src={items.img} className="h-full w-full object-cover" />
           </div>
+
           <div className="text-5xl font-bold tracking-widest">
             {items.title}
           </div>
