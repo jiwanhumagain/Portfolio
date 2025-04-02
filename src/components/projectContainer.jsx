@@ -9,7 +9,8 @@ function ButtonDesign({ itemName }) {
     );
 }
 
-export default function ProjectContainer({ direction }) {
+export default function ProjectContainer({ direction , data }) {
+    
     return (
         <div className={`w-[95%] md:w-[90%] lg:w-[80%] bg-violet-400 rounded-3xl flex flex-col ${direction === 'row-reverse' ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
             {/* Image Section */}
@@ -28,7 +29,7 @@ export default function ProjectContainer({ direction }) {
                 <div className='w-full flex flex-col items-start justify-start gap-y-4 sm:gap-y-6 md:gap-y-8 lg:gap-y-20'>
                     {/* Buttons Row */}
                     <div className='flex flex-wrap gap-2 sm:gap-3 md:gap-4'>
-                        <ButtonDesign itemName={'APP Design'} />
+                        <ButtonDesign itemName={'Portfolio'} />
                         <ButtonDesign itemName={'Web Design'} />
                         <ButtonDesign itemName={'UI Design'} />
                     </div>

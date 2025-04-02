@@ -76,10 +76,10 @@ export default function Education() {
 
     const dataWork = [
         {
-            'Name': 'Coming Soon',
-            'Des': '',
-            'start': '-',
-            'end': '-'
+            'Name': 'GE Aerospace Virtual Experience Program',
+            'Des': 'Developed a Vue.js UI simulation, demonstrating proficiency in Vue SFC Playground and feature implementation.',
+            'start': '01/025',
+            'end': '02/025'
         },
         // {
         //     'Name': 'Web Developer',

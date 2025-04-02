@@ -6,22 +6,28 @@ export default function ServicesScroll() {
     const Services = [
         {
             'title':'Web Design',
-            'img':'./assets/web.jpeg'
+            'img':'./assets/web.jpeg',
+            'desc':'Crafting visually appealing and user-friendly designs that enhance user experience and brand identity.'
         },
         {
             'title':'Backend Development',
-            'img':'./assets/backend.jpeg'
+            'img':'./assets/backend.jpeg',
+            'desc':'Building secure, scalable, and efficient server-side logic to power seamless digital experiences.'
 
         },
         {
        
             'title': 'Frontend Development',
-            'img':'./assets/frontend.jpeg'
+            'img':'./assets/frontend.jpeg',
+            'desc':'Creating responsive and interactive interfaces that bring designs to life with smooth user interactions.'
+
 
         },
         {
-            'title':    'App Development',
-            'img':'./assets/html.png'
+            'title': 'App Development',
+            'img':'./assets/html.png',
+            'desc':'Developing high-performance mobile and web applications tailored for functionality and user engagement.'
+
 
         }
         
@@ -56,13 +62,13 @@ export default function ServicesScroll() {
                         </div>
                         <div className="flex flex-col justify-center items-center gap-y-6 sm:gap-y-9">
                             <h1 className="font-bold text-2xl md:text-4xl text-center">{service.title}</h1>
-                            <p className="text-center break-words mx-8 sm:mx-14 font-serif text-lg md:text-xl font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            <p className="text-center break-words mx-8 sm:mx-14 font-serif text-lg md:text-xl font-medium justify-between p-5">
+                                {service.desc}
                             </p>
-                            <button className="flex items-center gap-2 hover:text-gray-600 transition-colors">
+                            {/* <button className="flex items-center gap-2 hover:text-gray-600 transition-colors">
                                 <span>Learn more</span>
                                 <ArrowForwardIcon className="text-gray" fontSize="large" />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 ))}

@@ -7,32 +7,32 @@ const servicesItems = [
   {
     'img': '/assets/html.png',
     'title': 'HTML/CSS',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Structuring and styling web pages for a seamless and visually appealing user experience.'
   },
   {
     'img': '/assets/JavaScript.png',
     'title': 'Javascript',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Adding interactivity and dynamic functionality to websites and web applications.'
   },
   {
     'img': '/assets/react.png',
     'title': 'React.js',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Building fast, scalable, and reusable UI components for modern web applications.'
   },
   {
     'img': '/assets/node.png',
     'title': 'Node.js',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Creating efficient, server-side applications with a fast, event-driven architecture.'
   },
   {
     'img': '/assets/flutter.png',
     'title': 'Flutter',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Developing cross-platform mobile apps with a single codebase and stunning UI.'
   },
   {
     'img': '/assets/mysql.jpeg',
     'title': 'MySQL',
-    'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    'desc': 'Managing structured data efficiently with a powerful and reliable relational database.'
   },
 ];
 
@@ -51,13 +51,16 @@ const ServiceRoundedContainer = () => {
           <div className="text-5xl font-bold tracking-widest">
             {items.title}
           </div>
-          <div className="text-xl font-medium tracking-wide px-8">
+          {/* <div className="text-xl font-medium tracking-wide px-8 justify-center">
             {items.desc}
-          </div>
-          <div className="flex items-center justify-center gap-x-4">
+          </div> */}
+          <p className="text-center break-words mx-8 sm:mx-14 text-xl md:text-xl font-medium justify-between">
+            {items.desc}
+          </p>
+          {/* <div className="flex items-center justify-center gap-x-4">
             <div className="text-xl">Learn More</div>
             <ArrowForwardIcon fontSize="large" />
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

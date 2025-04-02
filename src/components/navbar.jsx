@@ -83,7 +83,7 @@ export default function Navbar() {
 
       {/* Chat Button */}
       <button 
-        className="hidden md:flex box-border border-solid border-2 rounded px-9 py-3 text-lg md:px-5 md:py-2 
+        className="hidden bg-violet-700 text-white md:flex box-border border-solid border-2 rounded px-9 py-3 text-3xl md:px-5 md:py-2 
         [@media(prefers-color-scheme:dark)]:text-white [@media(prefers-color-scheme:dark)]:border-white" 
         onClick={() => { handelClick('Contact') }}
       >

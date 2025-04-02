@@ -2,6 +2,24 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ProjectContainer from './projectContainer';
 import { useRouter } from 'next/navigation';
+let projectData=[{
+    'skills':[
+        'Portfolio','Web Design','UI Design'
+    ],
+    'title':"Jiwan's Portfolio - A simple Portfolio website ",
+    'desc':'Showcasing my web development projects, built with Next.js and modern UI frameworks. Explore my portfolio to see examples of clean, responsive designs and functional applications.',
+    'img':''
+
+},
+{
+    'skills':[
+        'React','Node','JWT'
+    ],
+    'title':'Atthire - E-commerce Platform for clothes rental ',
+    'desc':'Developed a full-stack eCommerce platform for clothing rentals, featuring a responsive React.js frontend and secure Node.js/Express.js backend. Integrated Stripe payments and JWT authentication, with optimized search and filtering for seamless user experience.',
+    'img':''
+}
+]
 export default function Projects() {
     const router = useRouter();
     return (
@@ -40,7 +58,7 @@ export default function Projects() {
 
             {/* Projects Container */}
             <div className='flex flex-col items-center gap-y-6 sm:gap-y-8 md:gap-y-10 mt-8 sm:mt-12 md:mt-16'>
-                <ProjectContainer direction={'row'} />
+                <ProjectContainer direction={'row'} data={projectData}/>
                 <ProjectContainer direction={'row-reverse'} />
             </div>
         </div>

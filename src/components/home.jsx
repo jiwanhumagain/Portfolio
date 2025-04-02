@@ -24,6 +24,7 @@ export default function HomeComponent() {
                 <h1 className="mt-2 sm:mt-3 md:mt-5 lg:mt-8 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-widest font-serif">
                     Full Stack Developer
                 </h1>
+                
             </div>
 
             {/* Main Visual Section */}

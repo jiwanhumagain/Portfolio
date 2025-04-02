@@ -33,6 +33,7 @@ export default function Homepage() {
             {/* Main content */}
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <Navbar />
+            <marquee scrollamount="10" className="text-2xl sm:text-3xl lg:text-5xl bg-red-400 text-white flex justify-center">Currently Populating Real Data</marquee>
                 <HomeComponent />
                 <Marquee />
                 <Services/>
