@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import IntroNames from '../../introName';
 import { useSearchParams } from 'next/navigation';
 
@@ -18,8 +18,8 @@ const projectData = [
         challenges: "Handling real-time inventory updates, ensuring secure payments, and creating an efficient search and filter system were key challenges.",
         impact: "The platform enables a convenient and sustainable way for users to rent clothing items instead of buying, promoting a circular economy.",
         img1: '/assets/atthire/atthire1.png',
-        img2:'/assets/atthire/atthire2.png',
-        img3:'/assets/atthire/atthire3.png'
+        img2: '/assets/atthire/atthire2.png',
+        img3: '/assets/atthire/atthire3.png'
     },
     {
         id: '1',
@@ -35,8 +35,8 @@ const projectData = [
         challenges: "Developing a reliable AI model with high accuracy and handling complex medical terminology were major challenges.",
         impact: "The system assists both patients and healthcare professionals by quickly analyzing medical documents, reducing the time needed for manual review.",
         img1: '/assets/atthire/atthire1.png',
-        img2:'/assets/atthire/atthire2.png',
-        img3:'/assets/atthire/atthire3.png'
+        img2: '/assets/atthire/atthire2.png',
+        img3: '/assets/atthire/atthire3.png'
     },
     {
         id: '2',
@@ -52,8 +52,8 @@ const projectData = [
         challenges: "Ensuring security, preventing double voting, and maintaining transparency while keeping voter identities anonymous.",
         impact: "The project enhances electoral transparency and security, reducing fraud risks and increasing voter confidence in online elections.",
         img1: '/assets/atthire/atthire1.png',
-        img2:'/assets/atthire/atthire2.png',
-        img3:'/assets/atthire/atthire3.png'
+        img2: '/assets/atthire/atthire2.png',
+        img3: '/assets/atthire/atthire3.png'
     },
     {
         id: '3',
@@ -69,8 +69,8 @@ const projectData = [
         challenges: "Implementing real-time ride tracking, optimizing route calculations, and ensuring smooth user experience.",
         impact: "The app provides a convenient and affordable transportation solution, reducing travel time and increasing accessibility for users.",
         img1: '/assets/atthire/atthire1.png',
-        img2:'/assets/atthire/atthire2.png',
-        img3:'/assets/atthire/atthire3.png'
+        img2: '/assets/atthire/atthire2.png',
+        img3: '/assets/atthire/atthire3.png'
     },
     {
         id: '4',
@@ -86,8 +86,8 @@ const projectData = [
         challenges: "Providing accurate AI-based medical responses and ensuring secure communication between doctors and patients.",
         impact: "The app improves healthcare accessibility by offering instant medical guidance and remote doctor consultations, especially in remote areas.",
         img1: '/assets/atthire/atthire1.png',
-        img2:'/assets/atthire/atthire2.png',
-        img3:'/assets/atthire/atthire3.png'
+        img2: '/assets/atthire/atthire2.png',
+        img3: '/assets/atthire/atthire3.png'
     }
 ];
 
@@ -95,7 +95,9 @@ function DetailsPage() {
     return (
         <div>
             <IntroNames name={'Projects'} description={'Projects Details'} />
-            <DetailPageContainer />
+            <Suspense fallback={<div>Loading...</div>}>
+                <DetailPageContainer />
+            </Suspense>
         </div>
     );
 }
@@ -147,7 +149,7 @@ let DetailPageContainer = () => {
 
                             <div className="flex items-center gap-4">
                                 <div className="flex items-center">
-                                    <span className="text-green-300 dark:text-green-400 text-4xl">✔</span> 
+                                    <span className="text-green-300 dark:text-green-400 text-4xl">✔</span>
                                 </div>
 
                                 <div className=''>
@@ -165,7 +167,7 @@ let DetailPageContainer = () => {
                         </div>
                     </div>
                     <div className={`${darkMode ? 'bg-green-400' : 'bg-green-300'} rounded-3xl p-6 w-[25%] hidden lg:block`}>
-                        
+
                         <div className="mb-4">
                             <p className="text-black font-medium">Project Category :</p>
                             <h3 className="text-2xl font-bold text-black">App Design</h3>
@@ -196,12 +198,12 @@ let DetailPageContainer = () => {
 
                 {/* Bullet Points */}
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-2xl text-white">
-                    {selectedProject.solution_steps.map((item,index)=>(
-                         <div className="flex items-center gap-2" key={index}>
-                         <span className="text-green-300 dark:text-green-400">✔</span> {item}
-                     </div>
+                    {selectedProject.solution_steps.map((item, index) => (
+                        <div className="flex items-center gap-2" key={index}>
+                            <span className="text-green-300 dark:text-green-400">✔</span> {item}
+                        </div>
                     ))}
-                   
+
                 </div>
                 <div className="flex flex-col sm:flex-row gap-6 my-12">
                     {/* First Image Block */}
