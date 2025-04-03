@@ -1,5 +1,8 @@
+'use client'
 import React from "react";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useRouter } from 'next/navigation';
+
 
 function ButtonDesign({ itemName }) {
     return (
@@ -9,17 +12,19 @@ function ButtonDesign({ itemName }) {
     );
 }
 
-export default function ProjectContainer({ direction , data }) {
-    
+export default function ProjectContainer({ direction, data }) {
+    let router = useRouter();
+    console.log("Received Data in ProjectContainer:", data);
     return (
+
         <div className={`w-[95%] md:w-[90%] lg:w-[80%] bg-violet-400 rounded-3xl flex flex-col ${direction === 'row-reverse' ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
             {/* Image Section */}
             <div className='w-full lg:w-1/2 flex justify-center items-center rounded-3xl p-4 sm:p-6 md:p-8'>
-                <div className='relative aspect-video lg:aspect-square w-full flex items-center justify-center'>
-                    <img 
-                        src='/assets/image.png' 
-                        alt='Hero jiwan' 
-                        className='h-full w-full rounded-xl object-cover' 
+                <div className='relative aspect-square lg:aspect-square w-full flex items-center justify-center'>
+                    <img
+                        src={data.img}
+                        alt='Hero jiwan'
+                        className='h-full w-full rounded-xl object-contain'
                     />
                 </div>
             </div>
@@ -29,25 +34,27 @@ export default function ProjectContainer({ direction , data }) {
                 <div className='w-full flex flex-col items-start justify-start gap-y-4 sm:gap-y-6 md:gap-y-8 lg:gap-y-20'>
                     {/* Buttons Row */}
                     <div className='flex flex-wrap gap-2 sm:gap-3 md:gap-4'>
-                        <ButtonDesign itemName={'Portfolio'} />
-                        <ButtonDesign itemName={'Web Design'} />
-                        <ButtonDesign itemName={'UI Design'} />
+                        {data.skills.map((skills, index) => (
+                            <ButtonDesign key={index} itemName={skills} />
+                        ))}
                     </div>
 
                     {/* Title */}
                     <div className='text-2xl sm:text-3xl md:text-4xl text-white font-semibold'>
-                        Podcast - Podcast Mobile App Solution
+                        {data.title}
                     </div>
 
                     {/* Description */}
                     <div className='text-base sm:text-lg md:text-xl text-white/90'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        {data.desc}
                     </div>
 
                     {/* View Details Button */}
-                    <div className="h-12 sm:h-14 w-full sm:w-72 bg-white rounded-full flex items-center gap-3 sm:gap-5 justify-end">
-                        <div className="w-10 sm:w-12 h-10 sm:h-12 flex px-3 justify-center items-center rounded-full bg-purple-700">
+                    <div
+                        className="h-12 sm:h-14 w-full sm:w-72 bg-white rounded-full flex items-center gap-3 sm:gap-5 justify-end hover:cursor-pointer"
+                        onClick={() => router.push(`/ServiceDetails?id=${encodeURIComponent(data.id)}`)}
+                    >
+                        <div className="w-10 sm:w-12 h-10 sm:h-12 flex px-3 justify-center m-1 items-center rounded-full bg-purple-700">
                             <ArrowForwardIcon className="text-white" />
                         </div>
                         <div className="flex-1 sm:w-52 h-full rounded-full bg-green-500 flex justify-center items-center">

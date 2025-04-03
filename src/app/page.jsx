@@ -10,6 +10,7 @@ import PricingModel from "../components/pricing";
 import Contact from "../components/contact";
 import Blogs from "../components/blogs";
 import Footer from "../components/footer";
+import DetailsPage from "../components/modules/details/detailsPage";
 
 export default function Homepage() {
     const gridBackgroundStyle = {
@@ -33,7 +34,7 @@ export default function Homepage() {
             {/* Main content */}
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <Navbar />
-            <marquee scrollamount="10" className="text-2xl sm:text-3xl lg:text-5xl bg-red-400 text-white flex justify-center">Currently Populating Real Data</marquee>
+            <marquee scrollamount="10" className="text-2xl sm:text-3xl lg:text-5xl bg-red-400 text-white flex justify-center">Currently Populating Real Data, Switch to light mode, Might not be responsive for some devices</marquee>
                 <HomeComponent />
                 <Marquee />
                 <Services/>
@@ -47,6 +48,7 @@ export default function Homepage() {
                 <Blogs/>
                 <Marquee />
                 <Footer/>
+                {/* <DetailsPage/> */}
 
 
             </div>

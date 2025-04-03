@@ -2,26 +2,25 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ProjectContainer from './projectContainer';
 import { useRouter } from 'next/navigation';
-let projectData=[{
-    'skills':[
-        'Portfolio','Web Design','UI Design'
-    ],
-    'title':"Jiwan's Portfolio - A simple Portfolio website ",
-    'desc':'Showcasing my web development projects, built with Next.js and modern UI frameworks. Explore my portfolio to see examples of clean, responsive designs and functional applications.',
-    'img':''
-
-},
-{
-    'skills':[
-        'React','Node','JWT'
-    ],
-    'title':'Atthire - E-commerce Platform for clothes rental ',
-    'desc':'Developed a full-stack eCommerce platform for clothing rentals, featuring a responsive React.js frontend and secure Node.js/Express.js backend. Integrated Stripe payments and JWT authentication, with optimized search and filtering for seamless user experience.',
-    'img':''
-}
+let projectData=[
+    {
+        'id': '0',
+        'skills': ['React', 'Node.js', 'JWT'],
+        'title': "Atthire - E-commerce Platform for Clothes Rental",
+        'desc': "Developed a full-stack eCommerce platform for clothing rentals, featuring a responsive React.js frontend and secure Node.js/Express.js backend. Integrated Stripe payments and JWT authentication, with optimized search and filtering for seamless user experience.",
+        'img': '/assets/atthire/atthire1.png'
+    },
+    {
+        'id': '1',
+        'skills': ['Flask', 'AI/ML', 'RESTful API'],
+        'title': "MedScanAI - AI-driven Medical Report Analyzer",
+        'desc': "Created an AI-powered tool for extracting and classifying key medical information from reports. Built with Flask and machine learning models to identify medicines, symptoms, and diseases. Integrated RESTful APIs for seamless communication and real-time processing.",
+        'img': '/assets/project.png'
+    },
 ]
 export default function Projects() {
     const router = useRouter();
+    
     return (
         <div className="w-full bg-violet-600 relative pb-16 sm:pb-24 md:pb-32">
             {/* Header Section */}
@@ -46,7 +45,7 @@ export default function Projects() {
         
                 <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
                     <div className="h-14 sm:h-16 md:h-20 w-full sm:w-96 bg-white rounded-full flex items-center gap-3 sm:gap-5 justify-end hover:cursor-pointer" onClick={()=>{router.push('\Projects')}}>
-                        <div className="px-3 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 flex justify-center items-center rounded-full bg-purple-700">
+                        <div className="px-3 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 flex justify-center m-2 items-center rounded-full bg-purple-700">
                             <ArrowForwardIcon className="text-white" />
                         </div>
                         <div className="flex-1 sm:w-72 h-full rounded-full bg-green-500 flex justify-center items-center">
@@ -58,8 +57,8 @@ export default function Projects() {
 
             {/* Projects Container */}
             <div className='flex flex-col items-center gap-y-6 sm:gap-y-8 md:gap-y-10 mt-8 sm:mt-12 md:mt-16'>
-                <ProjectContainer direction={'row'} data={projectData}/>
-                <ProjectContainer direction={'row-reverse'} />
+                <ProjectContainer direction={'row'} data={projectData[0]}/>
+                <ProjectContainer direction={'row-reverse'} data={projectData[1]} />
             </div>
         </div>
     );

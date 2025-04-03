@@ -2,6 +2,44 @@ import React from 'react'
 import IntroNames from '../../introName'
 import ProjectContainer from '../../projectContainer'
 
+let projectData = [
+    {
+        'id': '0',
+        'skills': ['React', 'Node.js', 'JWT'],
+        'title': "Atthire - E-commerce Platform for Clothes Rental",
+        'desc': "Developed a full-stack eCommerce platform for clothing rentals, featuring a responsive React.js frontend and secure Node.js/Express.js backend. Integrated Stripe payments and JWT authentication, with optimized search and filtering for seamless user experience.",
+        'img': '/assets/atthire/atthire1.png'
+    },
+    {
+        'id': '1',
+        'skills': ['Flask', 'AI/ML', 'RESTful API'],
+        'title': "MedScanAI - AI-driven Medical Report Analyzer",
+        'desc': "Created an AI-powered tool for extracting and classifying key medical information from reports. Built with Flask and machine learning models to identify medicines, symptoms, and diseases. Integrated RESTful APIs for seamless communication and real-time processing.",
+        'img': '/assets/project.png'
+    },
+    {
+        'id': '2',
+        'skills': ['Blockchain', 'Solidity', 'React'],
+        'title': "e-Lect - Decentralized Voting System",
+        'desc': "Developed a blockchain-based voting platform to ensure secure, transparent, and tamper-proof elections. Built with Solidity smart contracts and a React frontend for real-time voting, ensuring anonymity while maintaining verifiability.",
+        'img': '/assets/project.png'
+    },
+    {
+        'id': '3',
+        'skills': ['Flutter', 'Firebase', 'Google Maps API'],
+        'title': "Ridify - Ride-Sharing and Car Rental App",
+        'desc': "Built a modern ride-sharing and car rental app with real-time ride tracking and navigation. Created with Flutter for cross-platform support and integrated Firebase for real-time data sync, along with Google Maps for accurate route navigation.",
+        'img': '/assets/project.png'
+    },
+    {
+        'id': '4',
+        'skills': ['Flutter', 'Firebase', 'AI Chatbot'],
+        'title': "AidWell - AI-powered Healthcare Assistance App",
+        'desc': "Developed a healthcare app offering virtual doctor consultations and AI-powered medical advice. Built using Flutter with Firebase for data storage and secure user authentication, along with an AI chatbot to assist with symptom checking and medical queries.",
+        'img': '/assets/project.png'
+    }
+];
+
 
 const ProjectInfoContainer=()=>{
   return(
@@ -26,12 +64,12 @@ const ProjectInfoContainer=()=>{
                 
             {/* Projects Container */}
             <div className='flex flex-col items-center gap-y-6 sm:gap-y-8 md:gap-y-10 mt-8 sm:mt-12 md:mt-16'>
-                <ProjectContainer direction={'row'} />
-                <ProjectContainer direction={'row-reverse'} />
-                <ProjectContainer direction={'row'} />
-                <ProjectContainer direction={'row-reverse'} />
-                <ProjectContainer direction={'row'} />
-                <ProjectContainer direction={'row-reverse'} />
+                <ProjectContainer direction={'row'} data={projectData[0]}/>
+                <ProjectContainer direction={'row-reverse'} data={projectData[1]}/>
+                <ProjectContainer direction={'row'} data={projectData[2]}/>
+                <ProjectContainer direction={'row-reverse'} data={projectData[3]}/>
+                <ProjectContainer direction={'row'} data={projectData[4]}/>
+                {/* <ProjectContainer direction={'row-reverse'} data={projectData[1]}/> */}
                 
             </div>
         </div>
