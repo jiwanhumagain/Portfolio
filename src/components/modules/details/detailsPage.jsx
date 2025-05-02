@@ -16,6 +16,7 @@ const projectData = [
             "Integrated Stripe for seamless and secure transactions.",
             "Developed an advanced search and filtering system using MongoDB indexing."
         ],
+        project_category:['Web Design','Personal Project','5 months','Nepal'],
         solution: "The solution involved implementing a dynamic inventory system that regularly updates from the server to ensure product availability is accurate. To ensure secure payments, we integrated Stripe, which handled the financial transactions smoothly. An advanced search and filtering system was developed using MongoDB indexing, which significantly improved the speed and accuracy of product searches, enhancing the overall user experience.",
         desc: "Atthire is a full-stack eCommerce platform designed for renting clothes. The platform provides users with a seamless experience to browse, rent, and return clothing items. The frontend is built using React.js, ensuring a modern and responsive UI, while the backend is powered by Node.js and Express.js. Secure transactions are handled using Stripe, and JWT authentication is implemented for user verification. Additionally, an optimized search and filtering system allows users to find products quickly. The platform also features an admin panel for managing inventory, orders, and user activity.",
         challenges: "Handling real-time inventory updates, ensuring secure payments, and creating an efficient search and filter system were key challenges.",
@@ -33,6 +34,8 @@ const projectData = [
             "Implemented NLP techniques to extract relevant information from medical reports.",
             "Integrated RESTful APIs for real-time processing and efficient communication."
         ],
+
+        project_category:['AI Project','Personal Project','5 months','Nepal'],
         solution: "The solution focused on training AI models with a comprehensive medical dataset to improve accuracy. Natural Language Processing (NLP) techniques were applied to extract relevant health information from medical reports. The backend was designed using Flask and integrated with RESTful APIs to enable real-time data processing, making the system efficient and responsive in analyzing medical reports.",
         desc: "MedScanAI is an AI-driven system designed to analyze medical reports and extract key health-related information. It helps patients and doctors by identifying medicines, symptoms, and diseases mentioned in reports. The system is built using Flask and machine learning models trained on medical datasets. It integrates RESTful APIs for smooth data processing and communication between the backend and frontend. The AI model achieves an accuracy of 89% in identifying relevant medical terms, making it a useful tool for quick health assessments.",
         challenges: "Developing a reliable AI model with high accuracy and handling complex medical terminology were major challenges.",
@@ -50,6 +53,8 @@ const projectData = [
             "Used cryptographic hashing to prevent voter identity exposure.",
             "Developed a user-friendly React interface for smooth interaction with the blockchain network."
         ],
+
+        project_category:['Web Design','Personal Project','5 months','Nepal'],
         solution: "The solution leverages blockchain technology to ensure secure, transparent, and immutable voting records. Smart contracts were deployed to guarantee that votes are stored in a tamper-proof ledger. To protect voter privacy, cryptographic hashing was used to anonymize voter identities. The frontend was built using React, offering an intuitive and user-friendly interface for interacting with the blockchain network.",
         desc: "e-Lect is a secure and decentralized online voting system powered by blockchain technology. It ensures transparency and integrity in elections by preventing data tampering and fraud. Built with Solidity and Hardhat, the system enables voters to securely cast their votes, which are stored in an immutable blockchain ledger. The React-based frontend provides a user-friendly experience, allowing users to register, vote, and verify election results in real-time. The system ensures anonymity while maintaining verifiability, making it a reliable digital voting solution.",
         challenges: "Ensuring security, preventing double voting, and maintaining transparency while keeping voter identities anonymous.",
@@ -67,6 +72,8 @@ const projectData = [
             "Used Firebase for efficient ride-matching and real-time database updates.",
             "Implemented a secure authentication system to verify users and drivers."
         ],
+
+        project_category:['App Design','Personal Project','5 months','Nepal'],
         solution: "The solution implemented Google Maps API to provide real-time location tracking and navigation, ensuring an efficient and accurate route calculation for rides. Firebase was used for real-time data synchronization, making the ride-matching process quick and effective. A secure authentication system was incorporated to ensure the safety and verification of users and drivers, enhancing overall trust in the platform.",
         desc: "Ridify is a modern ride-sharing and car rental application that provides users with multiple options for commuting. It allows users to book rides in real-time, schedule future rides, or rent a car for personal use. Built using Flutter, it offers a seamless cross-platform experience on both Android and iOS. The app integrates Firebase for real-time data synchronization and Google Maps API for navigation and location tracking. Advanced features such as fare estimation, driver rating, and ride history enhance the user experience.",
         challenges: "Implementing real-time ride tracking, optimizing route calculations, and ensuring smooth user experience.",
@@ -84,6 +91,8 @@ const projectData = [
             "Used Firebase for secure authentication and encrypted communication.",
             "Developed an easy-to-use interface with real-time doctor consultation options."
         ],
+
+        project_category:['App Design','Personal Project','5 months','Nepal'],
         solution: "The solution involved integrating the Gemini API for an AI-powered chatbot capable of providing medical advice based on user input. Firebase was used to ensure secure user authentication and encrypted communication between patients and doctors, ensuring privacy. The interface was designed to be user-friendly, providing real-time doctor consultations via video calls to bridge the healthcare gap, especially in underserved areas.",
         desc: "AidWell is a healthcare application designed to provide instant medical assistance through AI-driven chatbots and virtual doctor consultations. Built using Flutter, it offers a cross-platform experience for mobile users. The app includes features such as symptom checking, appointment scheduling, and real-time video consultations with healthcare professionals. It also integrates an AI-powered chatbot that provides medical advice based on user queries. Firebase is used for data storage and authentication, ensuring a secure and seamless experience for users.",
         challenges: "Providing accurate AI-based medical responses and ensuring secure communication between doctors and patients.",
@@ -175,22 +184,22 @@ let DetailPageContainer = () => {
 
                         <div className="mb-4">
                             <p className="text-black font-medium">Project Category :</p>
-                            <h3 className="text-2xl font-bold text-black">App Design</h3>
+                            <h3 className="text-2xl font-bold text-black">{selectedProject.project_category[0]}</h3>
                         </div>
 
                         <div className="mb-4">
                             <p className="text-black font-medium">Client :</p>
-                            <h3 className="text-2xl font-bold text-black">Bessie Cooper</h3>
+                            <h3 className="text-2xl font-bold text-black">{selectedProject.project_category[1]}</h3>
                         </div>
 
                         <div className="mb-4">
                             <p className="text-black font-medium">Duration :</p>
-                            <h3 className="text-2xl font-bold text-black">5 Month</h3>
+                            <h3 className="text-2xl font-bold text-black">{selectedProject.project_category[2]}</h3>
                         </div>
 
                         <div>
-                            <p className="text-black font-medium">County :</p>
-                            <h3 className="text-2xl font-bold text-black">United States</h3>
+                            <p className="text-black font-medium">Country:</p>
+                            <h3 className="text-2xl font-bold text-black">{selectedProject.project_category[3]}</h3>
                         </div>
                     </div>
                 </div>
