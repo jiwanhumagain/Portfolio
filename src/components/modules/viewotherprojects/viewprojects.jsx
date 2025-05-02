@@ -1,11 +1,11 @@
 import React from 'react'
 
-function viewprojects() {
+function Viewprojects() {
   return (
     <div>
-      
+      Hello
     </div>
   )
 }
 
-export default viewprojects
+export default Viewprojects

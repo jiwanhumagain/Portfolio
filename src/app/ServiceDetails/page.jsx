@@ -5,6 +5,7 @@ import DetailsPage from '../../components/modules/details/detailsPage';
 import Marquee from '../../components/marquee';
 import AmazingProject from '../../components/amazingproject'
 import Footer from '../../components/footer';
+import Viewprojects from '../../components/modules/viewotherprojects/viewprojects'
 
 export default function page() {
     const gridBackgroundStyle = {
@@ -25,11 +26,14 @@ export default function page() {
             <div style={gridBackgroundStyle} className="pointer-events-none"></div>
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <Navbar />
-               <DetailsPage/>
+                <DetailsPage />
                 <Marquee />
-                <AmazingProject/>
-                <Marquee/>
-                <Footer/>
+                {/* <Viewprojects />
+                <Marquee /> */}
+
+                <AmazingProject />
+                <Marquee />
+                <Footer />
             </div>
         </>
     )

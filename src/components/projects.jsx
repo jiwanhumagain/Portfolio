@@ -15,7 +15,7 @@ let projectData=[
         'skills': ['Flask', 'AI/ML', 'RESTful API'],
         'title': "MedScanAI - AI-driven Medical Report Analyzer",
         'desc': "Created an AI-powered tool for extracting and classifying key medical information from reports. Built with Flask and machine learning models to identify medicines, symptoms, and diseases. Integrated RESTful APIs for seamless communication and real-time processing.",
-        'img': '/assets/project.png'
+        'img': '/assets/medscan/medscan1.png'
     },
 ]
 export default function Projects() {

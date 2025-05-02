@@ -2,6 +2,9 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import IntroNames from '../../introName';
 import { useSearchParams } from 'next/navigation';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useRouter } from 'next/navigation';
+
 
 const projectData = [
     {
@@ -34,9 +37,9 @@ const projectData = [
         desc: "MedScanAI is an AI-driven system designed to analyze medical reports and extract key health-related information. It helps patients and doctors by identifying medicines, symptoms, and diseases mentioned in reports. The system is built using Flask and machine learning models trained on medical datasets. It integrates RESTful APIs for smooth data processing and communication between the backend and frontend. The AI model achieves an accuracy of 89% in identifying relevant medical terms, making it a useful tool for quick health assessments.",
         challenges: "Developing a reliable AI model with high accuracy and handling complex medical terminology were major challenges.",
         impact: "The system assists both patients and healthcare professionals by quickly analyzing medical documents, reducing the time needed for manual review.",
-        img1: '/assets/atthire/atthire1.png',
-        img2: '/assets/atthire/atthire2.png',
-        img3: '/assets/atthire/atthire3.png'
+        img1: '/assets/medscan/medscan1.png',
+        img2: '/assets/medscan/medscan2.png',
+        img3: '/assets/medscan/medscan3.png'
     },
     {
         id: '2',
@@ -51,9 +54,9 @@ const projectData = [
         desc: "e-Lect is a secure and decentralized online voting system powered by blockchain technology. It ensures transparency and integrity in elections by preventing data tampering and fraud. Built with Solidity and Hardhat, the system enables voters to securely cast their votes, which are stored in an immutable blockchain ledger. The React-based frontend provides a user-friendly experience, allowing users to register, vote, and verify election results in real-time. The system ensures anonymity while maintaining verifiability, making it a reliable digital voting solution.",
         challenges: "Ensuring security, preventing double voting, and maintaining transparency while keeping voter identities anonymous.",
         impact: "The project enhances electoral transparency and security, reducing fraud risks and increasing voter confidence in online elections.",
-        img1: '/assets/atthire/atthire1.png',
-        img2: '/assets/atthire/atthire2.png',
-        img3: '/assets/atthire/atthire3.png'
+        img1: '/assets/elect/elect1.png',
+        img2: '/assets/elect/elect2.jpg',
+        img3: '/assets/elect/elect3.jpg'
     },
     {
         id: '3',
@@ -68,9 +71,9 @@ const projectData = [
         desc: "Ridify is a modern ride-sharing and car rental application that provides users with multiple options for commuting. It allows users to book rides in real-time, schedule future rides, or rent a car for personal use. Built using Flutter, it offers a seamless cross-platform experience on both Android and iOS. The app integrates Firebase for real-time data synchronization and Google Maps API for navigation and location tracking. Advanced features such as fare estimation, driver rating, and ride history enhance the user experience.",
         challenges: "Implementing real-time ride tracking, optimizing route calculations, and ensuring smooth user experience.",
         impact: "The app provides a convenient and affordable transportation solution, reducing travel time and increasing accessibility for users.",
-        img1: '/assets/atthire/atthire1.png',
-        img2: '/assets/atthire/atthire2.png',
-        img3: '/assets/atthire/atthire3.png'
+        img1: '/assets/ridify/ridify1.png',
+        img2: '/assets/ridify/ridify2.png',
+        img3: '/assets/ridify/ridify3.png'
     },
     {
         id: '4',
@@ -109,6 +112,7 @@ let DetailPageContainer = () => {
     const searchParams = useSearchParams();
     const projectId = searchParams.get('id');
     const selectedProject = projectData.find(item => item.id === projectId);
+    const router = useRouter();
 
 
     // Check system preference for dark mode
@@ -133,8 +137,9 @@ let DetailPageContainer = () => {
                     <img
                         src={selectedProject.img1}
                         alt="Hero jiwan"
-                        className="h-full w-full rounded-xl object-cover grayscale hover:grayscale-0"
+                        className="h-full w-full rounded-xl object-contain grayscale hover:grayscale-0"
                     />
+
                 </div>
             </div>
 
@@ -211,7 +216,7 @@ let DetailPageContainer = () => {
                         <img
                             src={selectedProject.img2}
                             alt="Podcast App UI Screens"
-                            className="w-full h-full object-cover rounded-2xl"
+                            className="w-full h-full object-contain rounded-2xl"
                         />
                     </div>
 
@@ -220,7 +225,7 @@ let DetailPageContainer = () => {
                         <img
                             src={selectedProject.img3}
                             alt="Podcast App Interface"
-                            className="w-full h-full object-cover rounded-2xl"
+                            className="w-full h-full object-contain rounded-2xl"
                         />
                     </div>
                 </div>
@@ -235,6 +240,16 @@ let DetailPageContainer = () => {
 
 
 
+            </div>
+            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end pb-8">
+                <div className="h-14 sm:h-16 md:h-20 w-full sm:w-96 bg-white rounded-full flex items-center gap-3 sm:gap-5 justify-end hover:cursor-pointer" onClick={() => { router.push('\Projects') }}>
+                    <div className="px-3 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 flex justify-center m-2 items-center rounded-full bg-purple-700">
+                        <ArrowForwardIcon className="text-white" />
+                    </div>
+                    <div className="flex-1 sm:w-72 h-full rounded-full bg-green-500 flex justify-center items-center">
+                        <span className="text-black font-semibold text-lg sm:text-xl md:text-2xl">View Other Projects</span>
+                    </div>
+                </div>
             </div>
 
         </div>

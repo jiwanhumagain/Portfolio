@@ -23,7 +23,7 @@ export default function ProjectContainer({ direction, data }) {
                 <div className='relative aspect-square lg:aspect-square w-full flex items-center justify-center'>
                     <img
                         src={data.img}
-                        alt='Hero jiwan'
+                        alt={data.title}
                         className='h-full w-full rounded-xl object-contain'
                     />
                 </div>
