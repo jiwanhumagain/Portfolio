@@ -88,9 +88,9 @@ const projectData = [
         desc: "AidWell is a healthcare application designed to provide instant medical assistance through AI-driven chatbots and virtual doctor consultations. Built using Flutter, it offers a cross-platform experience for mobile users. The app includes features such as symptom checking, appointment scheduling, and real-time video consultations with healthcare professionals. It also integrates an AI-powered chatbot that provides medical advice based on user queries. Firebase is used for data storage and authentication, ensuring a secure and seamless experience for users.",
         challenges: "Providing accurate AI-based medical responses and ensuring secure communication between doctors and patients.",
         impact: "The app improves healthcare accessibility by offering instant medical guidance and remote doctor consultations, especially in remote areas.",
-        img1: '/assets/atthire/atthire1.png',
-        img2: '/assets/atthire/atthire2.png',
-        img3: '/assets/atthire/atthire3.png'
+        img1: '/assets/comingsoon.jpeg',
+        img2: '/assets/comingsoon.jpeg',
+        img3: '/assets/comingsoon.jpeg'
     }
 ];
 

@@ -36,7 +36,7 @@ let projectData = [
         'skills': ['Flutter', 'Firebase', 'AI Chatbot'],
         'title': "AidWell - AI-powered Healthcare Assistance App",
         'desc': "Developed a healthcare app offering virtual doctor consultations and AI-powered medical advice. Built using Flutter with Firebase for data storage and secure user authentication, along with an AI chatbot to assist with symptom checking and medical queries.",
-        'img': '/assets/hero.png'
+        'img': '/assets/comingsoon.jpeg'
     }
 ];
 
