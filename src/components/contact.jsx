@@ -9,9 +9,9 @@ import sendFormDetail from '../app/api/api';
 
 export default function Contact() {
     const ContactDetails = [
-        { icon: PhoneIcon, detail: '+9779800000000' },
-        { icon: EmailIcon, detail: 'example@gmail.com' },
-        { icon: LinkedInIcon, detail: 'example' },
+        { icon: PhoneIcon, detail: '+9779849132125' },
+        { icon: EmailIcon, detail: 'jeevanhumagain@gmail.com' },
+        { icon: LinkedInIcon, detail: 'Jiwan Humagain' },
         { icon: FmdGoodIcon, detail: 'Panauti-4, Kavre' },
     ];
 
